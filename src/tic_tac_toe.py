@@ -138,6 +138,11 @@ root.title("Tic--Tac--Toe")
 # Set the window to be non-resizable
 root.resizable(0, 0)
 
+# Create a 3x3 list of buttons to represent the game board
+buttons = [[0, 0, 0],
+           [0, 0, 0],
+           [0, 0, 0]]
+
 # Set the color of window 
 #root.configure(bg='blue')
 
@@ -145,11 +150,6 @@ root.resizable(0, 0)
 players = ['X', 'O']
 # Randomly choose the current player
 player = random.choice(players)
-
-# Create a 3x3 list of buttons to represent the game board
-buttons = [[0, 0, 0],
-           [0, 0, 0],
-           [0, 0, 0]]
 
 # Create a label to display the current player's turn
 label = Label(text=player + ' turn', font=('consolas', 30) )
