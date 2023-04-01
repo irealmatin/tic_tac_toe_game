@@ -91,7 +91,7 @@ def Check_Winner():
         buttons[1][1].config(bg="green")
         buttons[2][0].config(bg="green")
         return True
-
+        # if all buttoms full we set yellow color to show that the game was tie
     elif Empty_Spaces() is False:
 
         for row in range(3):
@@ -102,7 +102,7 @@ def Check_Winner():
     else:
         return False
 
-
+# define a function for empty space
 def Empty_Spaces():
     Spaces = 9
 
@@ -115,7 +115,7 @@ def Empty_Spaces():
         return False
     else:
         return True
-
+# define a function for set a new game
 def New_Game():
 
     global player
@@ -124,6 +124,7 @@ def New_Game():
 
     label.config(text=player+" turn")
 
+    # delete all last choices
     for row in range(3):
         for column in range(3):
             buttons[row][column].config(text="",bg="#F0F0F0")
