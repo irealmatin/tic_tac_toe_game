@@ -18,7 +18,7 @@ pip install -r requirements.txt
 ```
 python tic_tac_toe.py
 ```
-#How to Play
+# How to Play
 1-Choose your symbol - X or O.
 2-Take turns placing your symbol on the board by clicking on a cell.
 3-The first player to get three of their symbols in a row, column, or diagonal wins the game.
