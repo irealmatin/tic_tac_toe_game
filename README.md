@@ -4,7 +4,7 @@ This is a simple implementation of the classic game of Tic-Tac-Toe using Python 
 # Installing
 1 - Clone the repository to your local machine using the following command:
 ```
-git clone https://github.com/<your-username>/tic-tac-toe-game.git
+git clone https://github.com/<irealmatin>/tic-tac-toe-game.git
 ```
 2- Change the directory to the project folder:
 ```
