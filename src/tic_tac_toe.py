@@ -12,7 +12,7 @@ import random
 # 7|8|9
 #==========#
 
-
+#===========================Function==================================#
 
 # Define a function to handle the next turn
 def Next_Turn(i,j):
@@ -128,7 +128,8 @@ def New_Game():
     for row in range(3):
         for column in range(3):
             buttons[row][column].config(text="",bg="#F0F0F0")
-
+            
+#=========================================Design===================================#
 
 # Create a Tkinter window
 root = Tk()
