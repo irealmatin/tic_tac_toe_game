@@ -176,9 +176,6 @@ for i in range(3):
         # Place the button in the grid
         buttons[i][j].grid(row=i, column=j)
 
-
-
-
 # Run the mainloop to start the game
 root.mainloop()
 
