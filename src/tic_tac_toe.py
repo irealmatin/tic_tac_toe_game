@@ -15,7 +15,7 @@ import random
 #===========================Function==================================#
 
 # Define a function to handle the next turn
-def Next_Turn(i,j):
+def NextTurn(i,j):
 
     # Declare that we are using the global variable 'player'
     global player
@@ -30,7 +30,7 @@ def Next_Turn(i,j):
             buttons[i][j]['text'] = player
 
             # If the game is not won, change the player
-            if Check_Winner() is False:
+            if CheckWinner() is False:
                 player = players[1]
                 label.config(text=(players[1]+" turn"))
 
@@ -61,7 +61,7 @@ def Next_Turn(i,j):
                 label.config(text="Tie!")
 
 # Define a function to check if a player has won
-def Check_Winner():
+def CheckWinner():
     
         # Check rows for win
     for row in range(3):
@@ -92,7 +92,7 @@ def Check_Winner():
         buttons[2][0].config(bg="green")
         return True
         # if all buttoms full we set yellow color to show that the game was tie
-    elif Empty_Spaces() is False:
+    elif EmptySpaces() is False:
 
         for row in range(3):
             for column in range(3):
@@ -103,7 +103,7 @@ def Check_Winner():
         return False
 
 # define a function for empty space
-def Empty_Spaces():
+def EmptySpaces():
     Spaces = 9
 
     for row in range(3):
@@ -116,7 +116,7 @@ def Empty_Spaces():
     else:
         return True
 # define a function for set a new game
-def New_Game():
+def NewGame():
 
     global player
 
