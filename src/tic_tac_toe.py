@@ -21,7 +21,7 @@ def NextTurn(i,j):
     global player
 
     # Check if the button is empty and if no winner has been found
-    if buttons[i][j]['text'] == "" and Check_Winner() is False:
+    if buttons[i][j]['text'] == "" and CheckWinner() is False:
 
         # If player 1 is playing
         if player == players[0]:
@@ -35,11 +35,11 @@ def NextTurn(i,j):
                 label.config(text=(players[1]+" turn"))
 
             # If player 1 wins, display winner
-            elif Check_Winner() is True:
+            elif CheckWinner() is True:
                 label.config(text=(players[0]+" wins"))
 
             # If the game is a tie, display tie message
-            elif Check_Winner() == "Tie":
+            elif CheckWinner() == "Tie":
                 label.config(text="Tie!")
 
         # If player 2 is playing
@@ -48,16 +48,16 @@ def NextTurn(i,j):
             buttons[i][j]['text'] = player
 
             # If the game is not won, change the player
-            if Check_Winner() is False:
+            if CheckWinner() is False:
                 player = players[0]
                 label.config(text=(players[0]+" turn"))
 
             # If player 2 wins, display winner
-            elif Check_Winner() is True:
+            elif CheckWinner() is True:
                 label.config(text=(players[1]+" wins"))
 
             # If the game is a tie, display tie message
-            elif Check_Winner() == "Tie":
+            elif CheckWinner() == "Tie":
                 label.config(text="Tie!")
 
 # Define a function to check if a player has won
@@ -157,7 +157,7 @@ label = Label(text=player + ' turn', font=('consolas', 30) )
 label.pack(side='top')
 
 # Create a reset button to start a new game
-reset_button = Button(text="Reset", font=('consolas', 15),bg='gray', command=New_Game)
+reset_button = Button(text="Reset", font=('consolas', 15),bg='gray', command=NewGame)
 # Place the reset button at the top of the window
 reset_button.pack(side='top')
 
@@ -172,7 +172,7 @@ for i in range(3):
         # Create a button with '-' as the default text
         buttons[i][j] = Button(frame, text='', font=('consolas', 30),
                                width=5, height=2,
-                               command=lambda i=i, j=j: Next_Turn(i, j))
+                               command=lambda i=i, j=j: NextTurn(i, j))
         # Place the button in the grid
         buttons[i][j].grid(row=i, column=j)
 
