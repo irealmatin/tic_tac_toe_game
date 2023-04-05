@@ -1,6 +1,5 @@
-# Import the tkinter module
+#========================== module ================================#
 from tkinter import *
-# Import the random module
 import random
 
 # Define the game board
