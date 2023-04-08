@@ -10,7 +10,7 @@ import random
 # - - -
 # 7|8|9
 
-#===========================Function==================================#
+#===========================Functions==================================#
 
 # Define a function to handle the next turn
 def NextTurn(i,j):
