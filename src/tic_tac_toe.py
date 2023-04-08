@@ -140,7 +140,7 @@ root.resizable(0, 0)
 # Create a 3x3 list of buttons to represent the game board
 buttons = [[0, 0, 0],
            [0, 0, 0],
-           [0, 0, 0]]
+           [0, 0, 0]]   # [[None for _ in range(3)] for _ in range(3)]
 
 # Set the color of window 
 #root.configure(bg='blue')
